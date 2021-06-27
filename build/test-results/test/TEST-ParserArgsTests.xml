@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ParserArgsTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-06-27T15:45:49" hostname="Christopher-PC" time="0.084">
+  <properties/>
+  <testcase name="testArgLiteral" classname="ParserArgsTests" time="0.016"/>
+  <testcase name="testArgc" classname="ParserArgsTests" time="0.002"/>
+  <testcase name="testArguments" classname="ParserArgsTests" time="0.059"/>
+  <testcase name="testArgv" classname="ParserArgsTests" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

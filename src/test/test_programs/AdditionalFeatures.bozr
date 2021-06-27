@@ -1,0 +1,59 @@
+# This program is used to show our additional features.
+# It features the following features (explained in the document):
+# - Default parameters
+# - Named parameters
+# - Type inference with the keyword "var"
+# - For in loop
+# - String interpolation
+# - Tuple
+# - String concatenation
+# - Array concatenation
+# - Functions as values
+# - Nested functions
+
+# function that has a default parameter
+func var look_up_value(array<integer> arr = [1, 2, 3, 4, 5, 6], integer to_find) {
+    # "var" type inference, "index" is actually an integer
+    var index = 0
+    for (element : arr) { # for in loop
+        if (element == to_find) {
+            print("The element {element} has been found.") # string interpolation
+            ret index
+        }
+        index = index + 1
+    }
+    # type inference for the return of the function
+    ret -1
+}
+
+# named parameter + use the default parameter
+integer first_found = look_up_value(to_find: 5)
+
+# "var" type inference
+var second_found = look_up_value([10, 11, 12], 13)
+
+# tuple + type inference
+var my_tuple = (first_found, second_found)
+integer retrieved_first_index = my_tuple[0]
+# my_tuple[0] = 1 # not possible, tuples are immutable
+
+var concatenation_array = [1, 2, 3, 4] + [5, 6] + [7, 8, 9, 10]
+array<integer> concatenation_array_bis = [1, 2, 3, 4] + [5, 6] + [7, 8, 9, 10]
+# type of the elements inside the array can be inferred too
+integer x = concatenation_array[0]
+string string_concatenation = "Hello" + " " + "world."
+
+# returns a function using the var keyword to infer the type of the function
+func var create_function_string_concat(string s) {
+    func string own_string_concat(integer x = 1337) {
+        ret s + "{x}"
+    }
+    ret own_string_concat
+}
+
+var my_string_concat = create_function_string_concat("Super string -> ")
+string s = my_string_concat(5)
+string s = my_string_concat() # use the default parameter
+
+
+
