@@ -1,0 +1,27 @@
+func bool isPrime(integer number) {
+    if (number <= 1) {
+        ret false
+    }
+    bool prime = true
+    integer i = 2
+    while (i < number && prime) {
+        if (number % i == 0) {
+            prime = false
+        }
+        i = i + 1
+    }
+    ret prime
+}
+
+# MAIN
+integer N = parseToInt($0)
+integer current = 2
+integer count = 0
+
+while (count < N) {
+    if (isPrime(current)) {
+        print(current)
+        count = count + 1
+    }
+    current = current + 1
+}

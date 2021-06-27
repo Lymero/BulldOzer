@@ -1,0 +1,9 @@
+map<string, bool> m = {}
+integer i = 0
+while (i < $@) {
+    if (m[$i] == unknown) {
+        print($i)
+        m[$i] = true
+    }
+    i = i + 1
+}
