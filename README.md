@@ -1,6 +1,6 @@
-# BuldOzer
+# BulldOzer
 
-BuldOzer is a programming language that uses the [Autumn] parsing library, the [Uranium] semantic analysis library and is interpreted in Java.
+BulldOzer is a programming language that uses the [Autumn] parsing library, the [Uranium] semantic analysis library and is interpreted in Java.
 It is a mixture of objectless Java and a functional language.
 
 The implementation still contains some quirks, I would not recommend anyone to use it.
